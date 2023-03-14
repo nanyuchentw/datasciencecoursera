@@ -20,15 +20,8 @@ pollutantmean <- function(directory, pollutant, id= 1:332){
 }
 
 
-#以下測試用code
-xdata <- read.csv("specdata/001.csv")
-ydata <- xdata[complete.cases(xdata[, "sulfate"]), ]
-head(ydata)
-clean_data <- xdata[complete.cases(xdata[ , "sulfate"]), ]
-clean_data
-
 # 以下檢驗用code
-source("pollutantmean.R")
-pollutantmean("specdata", "sulfate", 1:10)     # 答案為 4.064128
-pollutantmean("specdata", "nitrate", 70:72)    # 答案為 1.706047
-pollutantmean("specdata", "nitrate", 23)       # 答案為 1.280833
+#source("pollutantmean.R")
+#pollutantmean("specdata", "sulfate", 1:10)     # 答案為 4.064128
+#pollutantmean("specdata", "nitrate", 70:72)    # 答案為 1.706047
+#pollutantmean("specdata", "nitrate", 23)       # 答案為 1.280833
