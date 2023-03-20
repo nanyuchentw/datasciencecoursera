@@ -48,11 +48,11 @@ rankall <- function (outcome, num) {
 
 
 num <- 10
-for (i in state_vec){
+for (i in 1:length(state_vec)){
         state_df <- df[df[,7]== state_vec[i] ,]
         clean_df <- state_df[complete.cases(state_df[,11]), ]
         n_in_state <- nrow(clean_df)
         state_result <- arrange(clean_df, clean_df[,11], clean_df[,2])
         rbind (result.df, c(state_result[num, 2], i))
-}
+        }
 result.df
