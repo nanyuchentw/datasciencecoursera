@@ -22,3 +22,7 @@ rankhospital("MN", "heart attack", 5000)
 
 rankhospital("BB", "heart failure", 4)
 rankhospital("NY", "hart failure", 5)
+
+#part4
+source("rankall.R")
+head(rankall("heart attack", 20), 10)
