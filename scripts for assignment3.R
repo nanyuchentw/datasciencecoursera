@@ -15,3 +15,10 @@ best("BB", "heart attack")
 best("NY", "hert attack")
 
 #part3
+source("rankhospital.R")
+rankhospital("TX", "heart failure", 4)
+rankhospital("MD", "heart attack", "worst")
+rankhospital("MN", "heart attack", 5000)
+
+rankhospital("BB", "heart failure", 4)
+rankhospital("NY", "hart failure", 5)
