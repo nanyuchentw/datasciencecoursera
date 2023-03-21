@@ -1,5 +1,5 @@
 
-rankall <- function (outcome, num) {
+rankall <- function (outcome, num=54) {
         library(dplyr)
         result.df <- data.frame()
         df <- read.csv("Assignment3/outcome-of-care-measures.csv")
@@ -20,7 +20,7 @@ rankall <- function (outcome, num) {
                                 if (num== "worst"){num <- n_in_state} 
                                 state_result <- arrange(clean_df, clean_df[,11], clean_df[,2])
                                 new_data <- data.frame(hospital=state_result[num, 2], state=i)
-                                rbind (result.df, new_data)
+                                result.df <-rbind (result.df, new_data)
                                 }
                 } else if (outcome== "heart failure"){
                         for (i in state_vec){
@@ -31,7 +31,7 @@ rankall <- function (outcome, num) {
                                 if (num== "worst"){num <- n_in_state}
                                 state_result <- arrange(clean_df, clean_df[,17], clean_df[,2])
                                 new_data <- data.frame(hospital=state_result[num, 2], state=i)
-                                rbind (result.df, new_data)
+                                result.df <-rbind (result.df, new_data)
                         }
                 } else {
                         for (i in state_vec){
@@ -42,7 +42,7 @@ rankall <- function (outcome, num) {
                                 if (num== "worst"){num <- n_in_state} 
                                 state_result <- arrange(clean_df, clean_df[,23], clean_df[,2])
                                 new_data <- data.frame(hospital=state_result[num, 2], state=i)
-                                rbind (result.df, new_data)
+                                result.df <-rbind (result.df, new_data)
                         }
                 }
                
