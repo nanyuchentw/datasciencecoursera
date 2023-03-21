@@ -1,3 +1,4 @@
+# This are test scripts for Assignment2
 #part1
 source("pollutantmean.R")
 pollutantmean("specdata", "nitrate")
