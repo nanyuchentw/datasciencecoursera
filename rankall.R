@@ -18,7 +18,7 @@ rankall <- function (outcome, num=54) {
                                 n_in_state <- nrow(clean_df)
                                 if (num== "best") {num <- 1}
                                 if (num== "worst"){num <- n_in_state} 
-                                state_result <- arrange(clean_df, clean_df[,11], clean_df[,2])
+                                state_result <- arrange (clean_df, clean_df[,11])
                                 new_data <- data.frame(hospital=state_result[num, 2], state=i)
                                 result.df <-rbind (result.df, new_data)
                                 }
@@ -29,7 +29,7 @@ rankall <- function (outcome, num=54) {
                                 n_in_state <- nrow(clean_df)
                                 if (num== "best") {num <-1}
                                 if (num== "worst"){num <- n_in_state}
-                                state_result <- arrange(clean_df, clean_df[,17], clean_df[,2])
+                                state_result <- arrange (clean_df, clean_df[,17])
                                 new_data <- data.frame(hospital=state_result[num, 2], state=i)
                                 result.df <-rbind (result.df, new_data)
                         }
@@ -40,14 +40,13 @@ rankall <- function (outcome, num=54) {
                                 n_in_state <- nrow(clean_df)
                                 if (num== "best") {num <-1}
                                 if (num== "worst"){num <- n_in_state} 
-                                state_result <- arrange(clean_df, clean_df[,23], clean_df[,2])
+                                state_result <- arrange (clean_df, clean_df[,23])
                                 new_data <- data.frame(hospital=state_result[num, 2], state=i)
                                 result.df <-rbind (result.df, new_data)
                         }
                 }
                
         }
-        result.df
+        result <- arrange (result.df, state)
 }
-
 
