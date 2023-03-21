@@ -6,9 +6,10 @@ hist(outcome[,11])
 
 #part 2
 source("best.R")
-best("TX", "heart attack")
+best("SC", "heart attack")
+best("NY", "pneumonia")
+best("AK", "pneumonia")
 best("TX", "heart failure")
-best ('MD', 'heart attack')
 best('MD', "pneumonia")
 
 best("BB", "heart attack")
@@ -19,9 +20,7 @@ source("rankhospital.R")
 rankhospital("TX", "heart failure", 4)
 rankhospital("MD", "heart attack", "worst")
 rankhospital("MN", "heart attack", 5000)
-
-rankhospital("BB", "heart failure", 4)
-rankhospital("NY", "hart failure", 5)
+rankhospital("TX", "pneumonia", 10)
 
 #part4
 source("rankall.R")
